@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendation System</title>
+<link href="{{ url_for('static', path='/css/main.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Bookworm 🐛📚 </h1>
+
+        <form action="/books-recommendation" method="POST">
+            <label for="books">Choose a book:</label>
+            <select id="books" name="selected_book">
+                {% for book in book_list %}
+                    <option value="{{ book }}" {% if selected_book == book %} selected {% endif %}>{{ book }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <div class="recommendations">
+            <h2>Recommendations based on similar tastes (Choose a book to see):</h2>
+            <div class="books-grid">
+                {% for index, recommended_book, image_url in recommended_books_with_images %}
+                    <div class="book-item">
+                        <img src="{{ image_url }}" alt="{{ recommended_book }}">
+                        <p>{{ recommended_book }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="popular">
+            <h2>All-time Favorite Books</h2>
+            <div class="books-inner-container">
+                {% for index, popular_book, image_url in popular_books_with_images %}
+                    <div class="book-item">
+                        <img src="{{ image_url }}" alt="{{ popular_book }}">
+                        <p>{{ popular_book }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

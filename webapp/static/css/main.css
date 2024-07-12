@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 20px;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1500px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.recommendations {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.recommendations h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px; /* Adjust the gap between items */
+    margin-top: 20px;
+}
+
+.book-item {
+    text-align: center;
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Limit the height of images if necessary */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.book-item p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.popular {
+    text-align: center;
+    margin-top: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping */
+    margin-bottom: 20px; /* Ensure scrollbar does not overlap content */
+}
+
+.popular .books-inner-container {
+    display: inline-flex; /* Use inline-flex to keep items in a single row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping */
+    margin-top: 10px;
+}
+
+.popular .book-item {
+    margin-right: 20px; /* Adjust spacing between items */
+    flex: 0 0 auto; /* Prevent items from wrapping */
+    text-align: center;
+}
+
+.popular .book-item img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.popular .book-item p {
+    font-size: 14px;
+    margin-top: 8px;
+}
