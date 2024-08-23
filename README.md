@@ -49,7 +49,7 @@ To run the web application locally:
 
 1. Clone the repository: 
 ```
-git clone <repository_url>
+git clone https://github.com/priyagupta18/bookworm.git
 ```
 2. Navigate to the webapp directory: 
 ```
